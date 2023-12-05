@@ -1,0 +1,172 @@
+nav.navbar {
+    background-color: #8AD300 !important;
+    font-family: 'Jockey One', sans-serif;
+}
+
+a.navbar-brand {
+    color: #12433F !important;
+    font-size: 30px;
+}
+
+a.nav-link {
+    color: #12433F !important;
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+a.nav-link:hover {
+    color: #8AD300 !important;
+    background-color: #12433F;
+    border-radius: 15px;
+}
+
+.c-active {
+    color: #12433F !important;
+    border: #12433F solid 1px;
+    border-radius: 15px;
+}
+
+.login-signup {
+    display: flex;
+    flex-direction: row;
+}
+
+#signUp-btn {
+    padding: 8px 25px;
+    border-radius: 15px;
+    border: #12433F solid 1px;
+    margin-right: -5px;
+}
+
+#login-btn {
+    padding: 8px 25px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+#login-btn:hover {
+    background-color: #12433F;
+}
+
+#quote {
+    padding-top: 120px;
+}
+
+#quote-text {
+    color: #12433F;
+}
+
+#quote .col-5 img {
+    width: 90%;
+}
+
+#why-we-should-care {
+    margin-top: 120px;
+}
+
+.layer {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 55%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    width: 100%;
+    position: absolute;
+}
+
+.carousel-caption {
+    z-index: 999;
+}
+
+#about-us h4 {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 30px;
+    color: #12433F;
+}
+
+#about-us p {
+    color: #12433F;
+    text-align: justify;
+}
+
+.custom-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom-col .container {
+    margin: 0 auto;
+}
+
+#about-us ul {
+    list-style: none;
+}
+
+#about-us li a i {
+    color: #12433F;
+}
+
+footer {
+    background-color: #8AD300 !important;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* styling untuk login-page */
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#kolom-kanan {
+    background-color: #8AD300;
+}
+
+.login-form {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #12433F;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.login-form a {
+    text-decoration: none;
+    color: #12433F;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form button#login-btn, .signUp-form button#signup-btn {
+    border-radius: 15px;
+    padding: 8px 40px;
+    background-color: #12433F;
+    color: #8AD300;
+}
+.login-form button:hover, .signUp-form button:hover {
+    border: #12433F solid 1px;
+
+}
+.back-to-home {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    border: #12433F solid 1px;
+}
+.back-to-home:hover{
+    text-decoration: none !important;
+    background-color: #12433F;
+    color:#8AD300;
+}
+.signUp-form{
+    font-family: 'Jockey One', sans-serif !important;
+}
