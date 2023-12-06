@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +21,14 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 Route::get('/', function () {
     return view('home', [
         'title' => 'Home',
-        'active' => 'home'
+    ]);
+});
+Route::get('/home', function () {
+    return view('home', [
+        'title' => 'Home'
     ]);
 });
 Route::get('/about', function () {
@@ -35,8 +36,7 @@ Route::get('/about', function () {
         'title' => 'About',
         "name" => "Rizal Aglal Faozi",
         "email" => "aglalrizal@upi.edu",
-        "image" => "pp.png",
-        'active' => 'about'
+        "image" => "pp.png"
     ]);
 });
 
@@ -51,4 +51,8 @@ Route::get('/posts', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/categories', [CategoryController::class, 'index']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+})->middleware('auth');
+Route::resource('dashboard/posts', DashboardPostController::class)->middleware('auth');
+// Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');

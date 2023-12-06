@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, Sluggable;
 
     //fillable artinya field yang boleh diisi
     // protected $fillable = ['title','slug', 'excerpt', 'body'];
@@ -15,6 +16,10 @@ class Post extends Model
     //guarded artinya field yang tidak boleh diisi
     protected $guarded = ['id'];
     protected $with = ['author', 'category'];
+
+    public function getRouteKeyName(){
+        return 'slug';
+    }
 
     public function scopeFilter($query, array $filters){
 
@@ -47,5 +52,13 @@ class Post extends Model
     }
     public function author(){
         return $this->belongsTo(User::class, 'user_id');
+    }
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

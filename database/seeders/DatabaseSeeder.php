@@ -25,11 +25,16 @@ class DatabaseSeeder extends Seeder
         //     'created_at' => now(),
         //     'updated_at' => now(),
         // ]);
-        // User::create([
-        //     'name' => 'Aglalrizal',
-        //     'email' => 'aglalrizal@upi.edu',
-        //     'password' => bcrypt('123456')
-        // ]);
+        User::create([
+            'name' => 'Aglalrizal',
+            'username' => 'Aglalrizal',
+            'dob'=>fake()->dateTime(),
+            'email' => 'aglalrizal@upi.edu',
+            'address' => 'Purwakarta',
+            'noHp' => '0812345678',
+            'account-type'=> 'personal',
+            'password' => bcrypt('12345678')
+        ]);
 
         // User::create([
         //     'name' => 'Rizal Aglal Faozi',
@@ -53,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
 
-        Post::factory(20)->create();
+        Post::factory(30)->create();
         // Post::create([
         //     'title' => 'Judul Pertama',
         //     'slug' => 'judul-pertama',

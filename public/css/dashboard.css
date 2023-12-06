@@ -1,3 +1,7 @@
+body{
+  color:#12433F;
+}
+
 .bi {
   display: inline-block;
   width: 1rem;
@@ -22,10 +26,7 @@
 .sidebar .nav-link {
   font-size: .875rem;
   font-weight: 500;
-}
-
-.sidebar .nav-link.active {
-  color: #2470dc;
+  color:#12433F !important;
 }
 
 .sidebar-heading {
@@ -36,12 +37,16 @@
  * Navbar
  */
 
-.navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+.navbar {
+  background-color: #8AD300 !important;
+  font-family: 'Jockey One', sans-serif;
 }
+
+.navbar-brand {
+  color: #12433F !important;
+  font-size: 30px;
+}
+
 
 .navbar .form-control {
   padding: .75rem 1rem;
