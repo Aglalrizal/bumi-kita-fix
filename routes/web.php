@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
@@ -47,9 +48,12 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/posts', [PostController::class, 'index']);
+Route::get('/campaigns', [CampaignController::class, 'index']);
+Route::get('/categories', [CategoryController::class, 'index']);
 //sigle post
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
-Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('campaigns/{campaign:slug}', [CampaignController::class, 'show']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');

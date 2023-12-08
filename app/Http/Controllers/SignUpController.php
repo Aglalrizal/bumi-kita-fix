@@ -17,7 +17,7 @@ class SignUpController extends Controller
         // return $request->all();
         $validatedData = $request->validate([
             'email' => 'required|email:dns|max: 255|unique:users',
-            'username' => 'required|min: 5|max: 255|unique:users',
+            'username' => 'required|min: 5|regex:/^[a-zA-Z0-9_-]+$|max: 255|unique:users',
             'name' => 'required|max: 255',
             'password' => 'required|confirmed|min:8',
             'address' => 'required|',

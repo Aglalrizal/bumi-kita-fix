@@ -11,7 +11,7 @@ a.navbar-brand {
 a.nav-link {
     color: #12433F !important;
     font-size: 20px;
-    margin: 0 15px;
+    margin: 0 3px;
 }
 
 a.nav-link:hover {
@@ -35,7 +35,6 @@ a.nav-link:hover {
     padding: 8px 25px;
     border-radius: 15px;
     border: #12433F solid 1px;
-    margin-right: -5px;
 }
 
 #login-btn {
@@ -169,4 +168,35 @@ footer {
 }
 .signUp-form{
     font-family: 'Jockey One', sans-serif !important;
+}
+
+.btn-custom {
+    color: #12433F;
+    background-color:#8AD300;
+    font-weight: 500;
+    border: #12433F solid 1px;
+}
+.btn-custom:hover{
+    background-color: #3c5a04;
+    color: #fff;
+}
+
+.page-link{
+    background-color: #8AD300;
+    color:#12433F;
+    border: #12433F solid 1px;
+}
+.page-link:hover{
+    background-color: #82a73d;
+    color:#12433F;
+    border: #12433F solid 1px;
+}
+.active>.page-link, .page-link.active{
+    background-color: #3c5a04 !important;
+    color: #fff;
+    border: #12433F solid 1px;
+}
+
+div.card-header {
+    background-color: #82a73d;
 }

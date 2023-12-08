@@ -14,7 +14,7 @@
             @endif
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search..." name="search" value="{{ request('search') }}">
-                <button class="btn btn-primary" type="submit">Search</button>
+                <button class="btn btn-custom" type="submit">Search</button>
             </div>
         </form>
     </div>
@@ -37,7 +37,7 @@
                 {{ $posts[0]->created_at->diffForHumans() }}</small>
         </p>
         <p class="card-text">{{ $posts[0]->excerpt }}</p>
-        <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
+        <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-custom">Read more</a>
     </div>
 </div>
 <div class="container">
@@ -59,7 +59,7 @@
                             {{ $post->created_at->diffForHumans() }}</small>
                     </p>
                     <p class="card-text">{{ $post->excerpt }}</p>
-                    <a href="/posts/{{ $post->slug }}" class="btn btn-primary text-decoration-none">Read more</a>
+                    <a href="/posts/{{ $post->slug }}" class="btn btn-custom text-decoration-none">Read more</a>
                 </div>
             </div>
         </div>

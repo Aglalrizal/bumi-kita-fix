@@ -3,10 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\User;
-use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Student;
+use App\Models\Campaign;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -41,7 +42,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'rizalaglalfaoji017@gmail.com',
         //     'password' => bcrypt('123456')
         // ]);
-        User::factory(3)->create();
+        User::factory(4)->create();
 
         Category::create([
             'name' => 'Web Programming',
@@ -57,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Personal',
             'slug' => 'personal'
         ]);
-
+        Campaign::factory(40)->create();
         Post::factory(30)->create();
         // Post::create([
         //     'title' => 'Judul Pertama',

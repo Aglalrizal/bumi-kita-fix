@@ -137,7 +137,4 @@
         </section>
     </div>
 </main>
-<footer>
-    <h6 class="text-center bottom-0">&copy;copyright 2023 | TEAM 1 | Built with &#10084;</h6>
-</footer>
 @endsection
