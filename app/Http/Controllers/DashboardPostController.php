@@ -93,7 +93,7 @@ class DashboardPostController extends Controller
         $validatedData['excerpt'] = Str::limit(strip_tags($validatedData['body']), 100);
         $validatedData['updated_at'] = Carbon::now();
         Post::where('id', $post['id'])->update($validatedData);
-        return redirect('/dashboard/posts')->with('success', 'Post has been edited.');
+        return redirect('/dashboard/posts')->with('success', 'Post berhasil diubah.');
     
 }
 
@@ -103,7 +103,7 @@ class DashboardPostController extends Controller
     public function destroy(Post $post)
     {
         Post::destroy($post->id);
-        return redirect('/dashboard/posts')->with('success', 'Post has been deleted!');
+        return redirect('/dashboard/posts')->with('success', 'Post berhasil dihapus!');
     }
     // public function checkSlug(Request $request){
     //     $slug = SlugService::createSlug(Post::class, 'slug', $request->title);

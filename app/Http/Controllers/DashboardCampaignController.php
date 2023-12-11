@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
-use App\Http\Requests\StoreStudentRequest;
-use App\Http\Requests\UpdateStudentRequest;
+use App\Models\Campaign;
+use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class DashboardCampaignController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-    }
+        return view('dashboard.campaigns.index', [
+            'campaigns'=>Campaign::where('user_id', auth()->user()->id)->get()
+        ]);    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +27,7 @@ class StudentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreStudentRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Student $student)
+    public function show(Campaign $campaign)
     {
         //
     }
@@ -43,7 +43,7 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $student)
+    public function edit(Campaign $campaign)
     {
         //
     }
@@ -51,7 +51,7 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateStudentRequest $request, Student $student)
+    public function update(Request $request, Campaign $campaign)
     {
         //
     }
@@ -59,8 +59,9 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Student $student)
+    public function destroy(Campaign $campaign)
     {
-        //
+        Campaign::destroy($campaign->id);
+        return redirect('/dashboard/campaigns')->with('success', 'Kampanye berhasil dihapus!');
     }
 }

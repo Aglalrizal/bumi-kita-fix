@@ -22,6 +22,13 @@
                         Campaigns
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="/dashboard/campaigns">
+                        <svg class="bi">
+                            <use xlink:href="#file-earmark-text" /></svg>
+                        Kampanye
+                    </a>
+                </li>
             </ul>
             <ul class="nav flex-column mb-auto">
                 <li class="nav-item p-2">

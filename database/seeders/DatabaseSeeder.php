@@ -26,6 +26,10 @@ class DatabaseSeeder extends Seeder
         //     'created_at' => now(),
         //     'updated_at' => now(),
         // ]);
+        $this->call([
+            ProvinsiSeeder::class,
+            KotaSeeder::class
+        ]);
         User::create([
             'name' => 'Aglalrizal',
             'username' => 'Aglalrizal',

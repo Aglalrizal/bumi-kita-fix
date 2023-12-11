@@ -19,7 +19,7 @@ class CampaignFactory extends Factory
         return [
             'title'=> $this->faker->unique()->sentence(mt_rand(5, 8)),
             'slug'=> $this->faker->unique()->slug(),
-            'kota'=> $this->faker->city(),
+            'kota_id'=> mt_rand(1, 510),
             'description'=> collect($this->faker->paragraphs(mt_rand(3,5)))
                         ->map(fn($p) => "<p>$p</p>")
                         ->implode(''),
